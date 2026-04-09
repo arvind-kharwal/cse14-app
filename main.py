@@ -17,7 +17,12 @@ profile_page= st.Page(
     title='My Profile',
     icon=":material/person:",
 )
-
-nb = st.navigation(pages=[about_page,profile_page,contact_page])
+#nb = st.navigation(pages=[about_page,profile_page,contact_page])
+nb = st.navigation(
+    {
+        'info': [about_page,profile_page],
+        'Useful Links': [contact_page],
+    }
+)
 st.logo('assets/moon.png')
 nb.run()
